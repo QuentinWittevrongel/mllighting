@@ -2,7 +2,7 @@
 
 Tool to create lights from a drawing.
 
-This project is a proof of concept and will not be maintain. Feel free to get and improve the tool on your side.
+This project is a proof of concept and will not be maintained. Feel free to get and improve the tool on your side.
 
 
 ## Dependencies
