@@ -1,0 +1,10 @@
+{
+    "hpath": "$MLLIGHTING",
+    "load_package_once": true,
+    "enable": "houdini_version >= '20.5'",
+    "env": [
+        {
+            "MLLIGHTING": "$HOUDINI_PACKAGE_PATH/package"
+        }
+    ]
+}

@@ -1,0 +1,146 @@
+# Dialog script for mllighting::mllighting::1.0 automatically generated
+
+{
+    name	mllighting::mllighting::1.0
+    script	mllighting::mllighting::1.0
+    label	"ML Lighting"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Input Stage"
+    inputlabel	2	"Input 2"
+    inputlabel	3	"Input 3"
+    inputlabel	4	"Input 4"
+
+    groupsimple {
+        name    "serverfolder"
+        label   "Server"
+
+        parm {
+            name    "serveraddress"
+            label   "Address"
+            type    string
+            joinnext
+            default { "127.0.0.1" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "colon"
+            label   "colon"
+            type    label
+            nolabel
+            joinnext
+            default { ":" }
+        }
+        parm {
+            name    "serverport"
+            label   "Port"
+            type    integer
+            nolabel
+            default { "8001" }
+            range   { 0 10 }
+            parmtag { "script_callback_language" "python" }
+            parmtag { "sidefx::slider" "none" }
+        }
+        parm {
+            name    "start"
+            label   "Start server"
+            type    button
+            joinnext
+            default { "0" }
+            help    "Start the receiver server"
+            parmtag { "script_callback" "from mllighting_houdini.hda import parameters;parameters.start_server(hou.pwd())" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "stop"
+            label   "Stop server"
+            type    button
+            default { "0" }
+            help    "Stop the receiver server"
+            parmtag { "script_callback" "from mllighting_houdini.hda import parameters;parameters.stop_server(hou.pwd())" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    groupsimple {
+        name    "renderfodler"
+        label   "Render"
+
+        parm {
+            name    "clearlights"
+            label   "Clear lights"
+            type    button
+            default { "0" }
+            parmtag { "script_callback" "from mllighting_houdini.hda import parameters;parameters.clear_lights(hou.pwd())" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "campath"
+            label   "Camera Path"
+            type    string
+            default { "/cameras/camera1" }
+            menureplace {
+                [ "import loputils" ]
+                [ "return loputils.createPrimPathMenu()" ]
+                language python
+            }
+            parmtag { "script_action" "import loputils\nloputils.selectPrimsInParm(kwargs, False)" }
+            parmtag { "script_action_help" "Select a primitive in the Scene Viewer or Scene Graph Tree pane.\nCtrl-click to select using the primitive picker dialog.\nAlt-click to toggle movement of the display flag." }
+            parmtag { "script_action_icon" "BUTTONS_reselect" }
+            parmtag { "sidefx::usdpathtype" "prim" }
+        }
+        parm {
+            name    "renderdirectory"
+            label   "Render directory"
+            type    directory
+            default { "" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "checkpoint"
+            label   "Checkpoint"
+            type    file
+            default { "" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "drawappaddress"
+            label   "Address"
+            type    string
+            joinnext
+            default { "127.0.0.1" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "colon2"
+            label   "colon"
+            type    label
+            nolabel
+            joinnext
+            default { ":" }
+        }
+        parm {
+            name    "drawappport"
+            label   "Port"
+            type    integer
+            nolabel
+            default { "8002" }
+            range   { 0 10 }
+            parmtag { "script_callback_language" "python" }
+            parmtag { "sidefx::slider" "none" }
+        }
+        parm {
+            name    "render"
+            label   "Render to drawing"
+            type    button
+            default { "0" }
+            help    "Render the current scene and sent to to the drawing application"
+            parmtag { "script_callback" "from mllighting_houdini.hda import parameters;parameters.render_to_drawing(hou.pwd())" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+}

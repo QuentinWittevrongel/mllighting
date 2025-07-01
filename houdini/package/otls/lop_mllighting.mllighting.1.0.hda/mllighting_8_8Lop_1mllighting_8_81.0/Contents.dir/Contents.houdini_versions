@@ -1,0 +1,17 @@
+{
+	"values":["20.5.613","2.0"
+	],
+	"indexes":{
+		"hdaroot/normal.userdata":1,
+		"hdaroot/position_product.userdata":1,
+		"hdaroot/merge1.userdata":0,
+		"hdaroot/normal_product.userdata":1,
+		"hdaroot/IN_RESULTS.userdata":0,
+		"hdaroot/position.userdata":1,
+		"hdaroot/rendersettings1.userdata":1,
+		"hdaroot/albedo_product.userdata":1,
+		"hdaroot/output0.userdata":0,
+		"hdaroot/OUT_RENDER.userdata":0,
+		"hdaroot/albedo.userdata":1
+	}
+}

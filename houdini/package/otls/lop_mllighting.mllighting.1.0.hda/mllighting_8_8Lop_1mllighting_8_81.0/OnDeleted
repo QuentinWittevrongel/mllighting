@@ -1,0 +1,4 @@
+from mllighting_houdini.hda import events
+
+
+events.on_deleted(kwargs)

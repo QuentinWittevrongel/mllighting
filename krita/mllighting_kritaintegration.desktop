@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=Krita/PythonPlugin
+X-KDE-Library=mllighting_kritaintegration
+X-Python-2-Compatible=false
+Name=ML Lighting tool Krita integration
+Comment=Krita integration of the ML Lighting tool

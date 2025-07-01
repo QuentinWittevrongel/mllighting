@@ -1,0 +1,13 @@
+Operator:     mllighting::mllighting::1.0
+Label:        ML Lighting
+Path:         oplib:/mllighting::Lop/mllighting::1.0?mllighting::Lop/mllighting::1.0
+Icon:         LOP_subnet
+Table:        Lop
+License:
+Extra:
+User:
+Inputs:       1 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Tue Jun 26 18:15:17 2025
